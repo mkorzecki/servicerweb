@@ -1,0 +1,57 @@
+#container {
+    margin: 0 20% 0 20%;
+    background-color: rgb(107, 104, 112);
+    float: none;
+}
+#hp {
+    padding: 1%;
+    background-color: rgb(85, 34, 167);
+    float: left;
+}
+#dell {
+    padding: 1%;
+    background-color: rgb(4, 117, 117);
+    float: left;
+}
+#apple {
+    padding: 1%;
+    background-color: rgb(190, 16, 161);
+    float: left;
+}
+#sony {
+    padding: 1%;
+    background-color: rgb(193, 224, 55);
+    float: left;
+}
+#hpButton {
+    padding: 1%;
+    background-color: rgb(85, 34, 167);
+    float: left;
+}
+#dellButton {
+    padding: 1%;
+    background-color: rgb(4, 117, 117);
+    float: left;
+}
+#appleButton {
+    padding: 1%;
+    background-color: rgb(190, 16, 161);
+    float: left;
+}
+#sonyButton {
+    padding: 1%;
+    background-color: rgb(193, 224, 55);
+    float: left;
+}
+#hpSeries {
+    display: none;
+}
+#dellSeries {
+    display: none;
+}
+#appleSeries {
+    display: none;
+}
+#sonySeries {
+    display: none;
+}
