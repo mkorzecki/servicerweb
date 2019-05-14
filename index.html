@@ -1,35 +1,340 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <title>Servicer</title>
 
-	<meta charset="utf-8" />
-	<meta name="description" content="servicer" />
-	<meta name="keywords" content="servicer" />
+    <meta charset="utf-8" />
+    <meta name="description" content="servicer" />
+    <meta name="keywords" content="servicer" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>    
+
+<body>
     <div id="container">
-        <div id="hp"> 
-            <button type="button" id="hpButton" onclick="openSeriesFunction()">HP</button>
-             <div id="hpSeries" class="seriesClass" onclick="openForm()">HP Series</div>
-            </div> 
-        <div id="dell"> 
-            <button type="button" id="dellButton" onclick="openSeriesFunction()">DELL</button>
-            <div id="dellSeries" class="seriesClass" onclick="openForm()">DELL Series</div>
-        </div> 
-        <div id="apple"> 
-            <button type="button" id="appleButton"onclick="openSeriesFunction()">APPLE</button>
-            <div id="appleSeries" class="seriesClass" onclick="openForm()">Apple Series</div>
-         </div>
-        <div id="sony"> 
-            <button type="button" id="sonyButton" onclick="openSeriesFunction()">SONY</button>
-            <div id="sonySeries" class="seriesClass" onclick="openForm()">SONY Series</div></div>
+        <div id="hp">
+            <button type="button" id="hpButton">HP</button>
+        </div>
+        <div id="dell">
+            <button type="button" id="dellButton">DELL</button>
+        </div>
+        <div id="apple">
+            <button type="button" id="appleButton">APPLE</button>
+        </div>
+        <div id="sony">
+            <button type="button" id="sonyButton">SONY</button>
+        </div>
+        <div id="series">
+            <!--HP Series-->
+            <div id="seriesHP" class="seriesClass">
+                <div class="accordion md-accordion" id="accordionHP" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="firstHpHeading">
+                            <a data-toggle="collapse" data-parent="#accordionHP" href="#firstHpCollapse"
+                                aria-expanded="false" aria-controls="firstHpCollapse">
+                                <h5 class="mb-0">
+                                    HP Series <i class="fas fa-angle-down rotate-icon">100</i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="firstHpCollapse" class="collapse" role="tabpanel" aria-labelledby="firstHpHeading"
+                            data-parent="#accordionHP">
+                            <div class="card-body">
+                                <!--HP Series List-->
+                                <div id="hpSeriesList">
+                                    <div class="list-group">
+                                        <button type="button" class="" data-toggle="modal" data-target="#exampleModal"
+                                            data-whatever="model1">
+                                            Wyślij zgłoszenie dla modelu 1
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Model 1</h5>
+                                                    <small>Seria</small>
+                                                </div>
+                                                <p class="mb-1">Opis.</p>
+                                                <small class="text-muted">Rok Produkcji</small>
+                                            </a>
+                                        </button>
+
+                                        <button type="button" class="" data-toggle="modal" data-target="#exampleModal"
+                                            data-whatever="model2">
+                                            Wyślij zgłoszenie dla modelu 2
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Model 2</h5>
+                                                    <small>Seria</small>
+                                                </div>
+                                                <p class="mb-1">Opis.</p>
+                                                <small class="text-muted">Rok Produkcji</small>
+                                            </a>
+                                        </button>
+                                        <button type="button" class="" data-toggle="modal" data-target="#exampleModal"
+                                            data-whatever="model3">
+                                            Wyślij zgłoszenie dla modelu 3
+                                            <a href="#"
+                                                class="list-group-item list-group-item-action flex-column align-items-start">
+                                                <div class="d-flex w-100 justify-content-between">
+                                                    <h5 class="mb-1">Model 3</h5>
+                                                    <small>Seria</small>
+                                                </div>
+                                                <p class="mb-1">Opis.</p>
+                                                <small class="text-muted">Rok Produkcji</small>
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!--HP Series List-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="secondHpHeading">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionHP"
+                                href="#secondHpCollapse" aria-expanded="false" aria-controls="secondHpCollapse">
+                                <h5 class="mb-0">
+                                    Series HP 200 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="secondHpCollapse" class="collapse" role="tabpanel" aria-labelledby="secondHpHeading"
+                            data-parent="#accordionHP">
+                            <div class="card-body">
+                                200 200 200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree3">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionHP"
+                                href="#thirdHpCollapse" aria-expanded="false" aria-controls="thirdHpCollapse">
+                                <h5 class="mb-0">
+                                    Series HP 300 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="thirdHpCollapse" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                            data-parent="#accordionHP">
+                            <div class="card-body">
+                                300 300 300
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--HP Series-->
+            <!--DELL Series-->
+            <div id="seriesDell" class="seriesClass">
+                <div class="accordion md-accordion" id="accordionDell" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="firstDellHeading">
+                            <a data-toggle="collapse" data-parent="#accordionDell" href="#firstDellCollapse"
+                                aria-expanded="false" aria-controls="firstDellCollapse">
+                                <h5 class="mb-0">
+                                    Series DELL 100 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="firstDellCollapse" class="collapse" role="tabpanel" aria-labelledby="firstDellHeading"
+                            data-parent="#accordionDell">
+                            <div class="card-body">
+                                100 100 100
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="secondDellHeading">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionDell"
+                                href="#secondDellCollapse" aria-expanded="false" aria-controls="secondDellCollapse">
+                                <h5 class="mb-0">
+                                    Series DELL 200 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="secondDellCollapse" class="collapse" role="tabpanel"
+                            aria-labelledby="secondDellHeading" data-parent="#accordionDell">
+                            <div class="card-body">
+                                200 200 200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree3">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionDell"
+                                href="#thirdDellCollapse" aria-expanded="false" aria-controls="thirdDellCollapse">
+                                <h5 class="mb-0">
+                                    Series DELL 300 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="thirdDellCollapse" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                            data-parent="#accordionDell">
+                            <div class="card-body">
+                                300 300 300
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--DELL Series-->
+            <!--APPLE Series-->
+            <div id="seriesApple" class="seriesClass">
+                <div class="accordion md-accordion" id="accordionApple" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="firstAppleHeading">
+                            <a data-toggle="collapse" data-parent="#accordionApple" href="#firstAppleCollapse"
+                                aria-expanded="false" aria-controls="firstAppleCollapse">
+                                <h5 class="mb-0">
+                                    Series APPLE 100 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="firstAppleCollapse" class="collapse" role="tabpanel"
+                            aria-labelledby="firstAppleHeading" data-parent="#accordionApple">
+                            <div class="card-body">
+                                100 100 100
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="secondAppleHeading">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionApple"
+                                href="#secondAppleCollapse" aria-expanded="false" aria-controls="secondAppleCollapse">
+                                <h5 class="mb-0">
+                                    Series APPLE 200 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="secondAppleCollapse" class="collapse" role="tabpanel"
+                            aria-labelledby="secondAppleHeading" data-parent="#accordionApple">
+                            <div class="card-body">
+                                200 200 200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree3">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionApple"
+                                href="#thirdAppleCollapse" aria-expanded="false" aria-controls="thirdAppleCollapse">
+                                <h5 class="mb-0">
+                                    Series APPLE 300 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="thirdAppleCollapse" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                            data-parent="#accordionApple">
+                            <div class="card-body">
+                                300 300 300
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--APPLE Series-->
+            <!--SONY Series-->
+            <div id="seriesSony" class="seriesClass">
+                <div class="accordion md-accordion" id="accordionSony" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="firstSonyHeading">
+                            <a data-toggle="collapse" data-parent="#accordionSony" href="#firstSonyCollapse"
+                                aria-expanded="false" aria-controls="firstSonyCollapse">
+                                <h5 class="mb-0">
+                                    Series SONY 100 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="firstSonyCollapse" class="collapse" role="tabpanel" aria-labelledby="firstSonyHeading"
+                            data-parent="#accordionSony">
+                            <div class="card-body">
+                                100 100 100
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="secondSonyHeading">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionSony"
+                                href="#secondSonyCollapse" aria-expanded="false" aria-controls="secondSonyCollapse">
+                                <h5 class="mb-0">
+                                    Series SONY 200 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="secondSonyCollapse" class="collapse" role="tabpanel"
+                            aria-labelledby="secondSonyHeading" data-parent="#accordionSony">
+                            <div class="card-body">
+                                200 200 200
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingThree3">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionSony"
+                                href="#thirdSonyCollapse" aria-expanded="false" aria-controls="thirdSonyCollapse">
+                                <h5 class="mb-0">
+                                    Series SONY 300 <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+                        <div id="thirdSonyCollapse" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                            data-parent="#accordionSony">
+                            <div class="card-body">
+                                300 300 300
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--SONY Series-->
+        </div>
+        <!--modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Zgłoś usterkę</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Model:</label>
+                                <input type="text" class="form-control" id="recipient-name" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-text" class="col-form-label">Opis:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                        <button type="button" class="btn btn-primary">Wyślij</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--modal-->
     </div>
 </body>
+
 </html>
