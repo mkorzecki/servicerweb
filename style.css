@@ -66,3 +66,29 @@
 #sonySeries {
     display: none;
 }
+#leftFormSection
+{
+    width: 50%;
+    float: left;
+}
+#rightFormSection {
+    width: 50%;
+    float: left;
+}
+
+#success_message{ 
+    display: none;
+}
+
+#sendRequestButton {
+    float: right;
+    clear: both;
+}
+#modelIdGroup {
+    display: none;
+}
+
+/* Classes */
+.customLabel {
+    margin-top: 2%;
+}
