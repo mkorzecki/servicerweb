@@ -16,8 +16,10 @@
 
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -863,7 +865,7 @@
                                                     <div class="col-md-8 inputGroupContainer">
                                                         <div class="input-group">
                                                             <input id="name" name="name" placeholder="Imie"
-                                                                class="form-control" required="true" value=""
+                                                                class="form-control" required="false" value=""
                                                                 type="text">
                                                         </div>
                                                     </div>
@@ -882,7 +884,7 @@
                                                     <div class="col-md-8 inputGroupContainer">
                                                         <div class="input-group">
                                                             <input id="surname" name="surname" placeholder="Nazwisko"
-                                                                class="form-control" required="true" value=""
+                                                                class="form-control" required="false" value=""
                                                                 type="text">
                                                         </div>
                                                     </div>
@@ -901,7 +903,7 @@
                                                     <div class="col-md-8 inputGroupContainer">
                                                         <div class="input-group">
                                                             <input id="email" name="email" placeholder="E-mail"
-                                                                class="form-control" required="true" value=""
+                                                                class="form-control" required="false" value=""
                                                                 type="email">
                                                         </div>
                                                     </div>
@@ -921,7 +923,7 @@
                                                         <div class="input-group">
                                                             <input id="phoneNumber" name="phoneNumber"
                                                                 placeholder="Telefon" class="form-control"
-                                                                required="true" value="" type="number">
+                                                                required="false" value="" type="number">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -939,7 +941,7 @@
                                                     <div class="col-md-8 inputGroupContainer">
                                                         <div class="input-group">
                                                             <input id="city" name="city" placeholder="Miasto"
-                                                                class="form-control" required="true" value=""
+                                                                class="form-control" required="false" value=""
                                                                 type="text">
                                                         </div>
                                                     </div>
@@ -958,7 +960,7 @@
                                                     <div class="col-md-8 inputGroupContainer">
                                                         <div class="input-group">
                                                             <input id="street" name="street" placeholder="Ulica"
-                                                                class="form-control" required="true" value=""
+                                                                class="form-control" required="false" value=""
                                                                 type="text">
                                                         </div>
                                                     </div>
@@ -978,7 +980,7 @@
                                                         <div class="input-group">
                                                             <input id="suitNumber" name="suitNumber"
                                                                 placeholder="Numer domu" class="form-control"
-                                                                required="true" value="" type="text">
+                                                                required="false" value="" type="text">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -997,7 +999,7 @@
                                                         <div class="input-group">
                                                             <input id="flatNumber" name="flatNumber"
                                                                 placeholder="Numer mieszkania" class="form-control"
-                                                                required="true" value="" type="text">
+                                                                required="false" value="" type="text">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1016,7 +1018,7 @@
                                                         <div class="input-group">
                                                             <input id="zipPostal" name="zipPostal"
                                                                 placeholder="Kod pocztowy" class="form-control"
-                                                                required="true" value="" type="text">
+                                                                required="false" value="" type="text">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1031,7 +1033,7 @@
                                         <div class="row">
                                             <label for="model" class="col-form-label">Model:</label>
                                             <input id="model" name="model" placeholder="Model" class="form-control"
-                                                required="true" value="" type="text">
+                                                required="false" value="" type="text">
                                         </div>
                                     </div>
                                     <!-- Temat-->
@@ -1039,7 +1041,7 @@
                                         <div class="row">
                                             Temat:
                                             <input id="subject" name="subject" placeholder="Temat" class="form-control"
-                                                required="true" value="" type="text">
+                                                required="false" value="" type="text">
                                         </div>
                                     </div>
                                     <!-- Kategoria -->
@@ -1047,7 +1049,7 @@
                                         <div class="row">
                                             Typ usterki:
                                             <select name="category" class="form-control selectpicker" form="requestForm"
-                                                required="true">
+                                                required="false">
                                                 <option>Uszkodzenie mechaniczne</option>
                                                 <option>Problem z oprogramowaniem\systemem</option>
                                             </select>
@@ -1058,7 +1060,7 @@
                                         <div class="row">
                                             Opis:
                                             <textarea id="description" name="description" placeholder="Opis usterki"
-                                                required="true" class="form-control" rows="10" form="requestForm"
+                                                required="false" class="form-control" rows="10" form="requestForm"
                                                 wrap="soft"></textarea>
                                         </div>
                                     </div>
@@ -1079,7 +1081,6 @@
         </div>
     </div>
     <!--modal-->
-    </div>
 </body>
 <!-- comment -->
 </html>

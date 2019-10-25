@@ -84,9 +84,9 @@
     float: right;
     clear: both;
 }
-#modelIdGroup {
+/* #modelIdGroup {
     display: none;
-}
+} */
 
 /* Classes */
 .customLabel {
