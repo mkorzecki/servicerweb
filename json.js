@@ -1,11 +1,10 @@
 $(document).ready(function() {
   $("#sendRequestButton").click(function(e) {
     var jsonData = {};
-    debugger;
     var formData = $("#requestForm").serializeArray();
-    var subject = formData[10];
-    var description = formData[12];
-    var itemId = { name: "itemid", value: "3" };
+    var subject = formData[0];
+    var description = formData[1];
+    var itemId = formData[3];
     formData.splice(0, formData.length);
     formData.push(subject);
     formData.push(description);
@@ -23,37 +22,20 @@ $(document).ready(function() {
     });
     debugger;
     console.log(jsonData);
+    console.log(JSON.stringify({
+      subject: "temattemattemat",
+      description: "opisopisopisopisopisopis",
+      itemid: 3}));
     $.ajax({
       url: "http://localhost:5000/api/tickets",
       method: "POST",
       dataType: "json",
       contentType: "application/json",
-      data: JSON.stringify({
-        subject: "temattemattemat",
-        description: "opisopisopisopisopisopis",
-        itemid: 3
-      })
+      data: JSON.stringify(jsonData)
     }).done(response => {
       console.log(response);
-    });
-    //if (isAllFieldsAreFulfiled(formData) == true /*&& validateEmail(jsonData.email) == true*/) {
-    //     $.ajax({
-    //       url: "http://localhost:5000/api/tickets",
-    //       method: "POST",
-    //       dataType: "json",
-    //       contentType: "application/json",
-    //       data: JSON.stringify({
-    //         subject: "temattemattemat",
-    //         description: "opisopisopisopisopisopis",
-    //         itemid: 3
-    //       })
-    //     }).done(response => {
-    //       console.log(response);
-    //     });
-    // }
-    // else {
-    //     console.log("Not all fields was fulfilled")
-    // }
+    }).fail(function (jqXHR, textStatus, errorThrown) { alert("error"); });
+    ;
   });
 });
 function isAllFieldsAreFulfiled(formData) {

@@ -1,94 +1,33 @@
-#container {
-    margin: 0 20% 0 20%;
-    background-color: rgb(107, 104, 112);
-    float: none;
+.bg-primary {
+    background-color: #008cba !important;
 }
-#hp {
-    padding: 1%;
-    width: 25%;
-    background-color: rgb(85, 34, 167);
-    float: left;
+ .fa { 
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} 
+.fa-wrench:before {
+    content: "\f0ad";
 }
-#dell {
-    padding: 1%;
-    width: 25%;
-    background-color: rgb(4, 117, 117);
-    float: left;
+
+.navbar-dark .navbar-brand {
+    color: #fff;
 }
-#apple {
-    padding: 1%;
-    width: 25%;
-    background-color: rgb(190, 16, 161);
-    float: left;
-}
-#sony {
-    padding: 1%;
-    width: 25%;
-    background-color: rgb(193, 224, 55);
-    float: left;
-}
-#hpButton {
-    padding: 1%;
-    width: 100%;
-    background-color: rgb(85, 34, 167);
-    float: left;
-}
-#dellButton {
-    padding: 1%;
-    width: 100%;
-    background-color: rgb(4, 117, 117);
-    float: left;
-}
-#appleButton {
-    padding: 1%;
-    width: 100%;
-    background-color: rgb(190, 16, 161);
-    float: left;
-}
-#sonyButton {
-    padding: 1%;
-    width: 100%;
-    background-color: rgb(193, 224, 55);
-    float: left;
-}
-#series {
-    display: none;
-}
-#hpSeries {
-    display: none;
-}
-#dellSeries {
-    display: none;
-}
-#appleSeries {
-    display: none;
-}
-#sonySeries {
-    display: none;
+
+body {
+    font-family: "Open Sans",  "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 #leftFormSection
 {
-    width: 50%;
+    margin-right: 2%;
+    width: 48%;
     float: left;
 }
 #rightFormSection {
-    width: 50%;
+    margin-left: 2%;
+    width: 48%;
     float: left;
-}
-
-#success_message{ 
-    display: none;
-}
-
-#sendRequestButton {
-    float: right;
-    clear: both;
-}
-/* #modelIdGroup {
-    display: none;
-} */
-
-/* Classes */
-.customLabel {
-    margin-top: 2%;
 }
