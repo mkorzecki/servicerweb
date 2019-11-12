@@ -2,14 +2,41 @@ $(document).ready(function() {
   $("#sendRequestButton").click(function(e) {
     var jsonData = {};
     var formData = $("#requestForm").serializeArray();
-    var subject = formData[0];
-    var description = formData[1];
-    var itemId = formData[3];
+    var firstName = formData[0];
+    var lastName = formData[1];
+    var sex = formData[2];
+    var email = formData[3];
+    var phone = formData[4];
+    var subject = formData[5];
+    var description = formData[6];
+    var origin = formData[7];
+    var type = formData[8];
+    var status = formData[9];
+    var priority = formData[10];
+    var itemId = formData[11];
+    var productionYear = formData[12];
+    var name = formData[13];
+    var manufacturer = formData[14];
+    var series = formData[15];
+
+    var person = {name: "person", value: {firstName, lastName, sex, email,phone}}
+    var customer = {name: "customer", value: person};
+    
+    var productSpecification = {name: "productSpecification", value: {manufacturer, series, name}};
+    var item = {name: "item", value:
+    {productionYear, productSpecification, customer}}
+
     formData.splice(0, formData.length);
+    formData.push(origin);
+    formData.push(type);
+    formData.push(status);
+    formData.push(priority);
+    formData.push(itemId);
     formData.push(subject);
     formData.push(description);
-    formData.push(itemId);
-
+    formData.push(item);
+    
+    console.log(formData);
     $.each(formData, function() {
       if (jsonData[this.name]) {
         if (!jsonData[this.name].push) {
@@ -22,10 +49,6 @@ $(document).ready(function() {
     });
     debugger;
     console.log(jsonData);
-    console.log(JSON.stringify({
-      subject: "temattemattemat",
-      description: "opisopisopisopisopisopis",
-      itemid: 3}));
     $.ajax({
       url: "http://localhost:5000/api/tickets",
       method: "POST",
@@ -34,8 +57,8 @@ $(document).ready(function() {
       data: JSON.stringify(jsonData)
     }).done(response => {
       console.log(response);
-    }).fail(function (jqXHR, textStatus, errorThrown) { alert("error"); });
-    ;
+    }); 
+    alert("Zgłosznie zostało wysłane");
   });
 });
 function isAllFieldsAreFulfiled(formData) {

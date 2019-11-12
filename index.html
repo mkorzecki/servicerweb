@@ -27,53 +27,138 @@
         <a class="navbar-brand">
             <i class="fa fa-wrench mr-2"></i> servicer
         </a>
-        <form action="http://localhost:4200/" style="float: right; margin-top: 1%; margin-right: 1%;">
+        <!-- <form action="http://localhost:4200/" style="float: right; margin-top: 1%; margin-right: 1%;">
           <button class="btn btn-info"type="submit" >Pokaż moje zgłoszenia</button>
-      </form>
+      </form> -->
     </nav>
 
     <div class="container justify-content-center">
             <form method="post" id="requestForm">
-                <h2 class="text-center text-primary ">Zgłoś usterkę</h2>
+                <h2 class="text-center text-primary">Zgłoś usterkę</h2>
                             <hr>
                         <div id="leftFormSection">
-                            <div class="form-group ">
-                                <label for="subject ">Temat</label>
-                              <input type="text " class="form-control " placeholder="Temat " name="subject">
-                              <div class="invalid-feedback ">Temat musi mieć co najmniej 10 znaków.</div>
+                            <div class="form-group">
+                                <label for="firstName">Imie</label>
+                              <input type="text" class="form-control" placeholder="Imie" name="firstName">
                             </div>
-                            <div class="form-group ">
-                                    <label for="description ">Opis</label>
-                                    <textarea class="form-control " name="description"></textarea>
-                                    <div class="invalid-feedback ">Opis musi mieć co najmniej 20 znaków.</div>
+                            <div class="form-group">
+                                <label for="lastName">Nazwisko</label>
+                              <input type="text" class="form-control" placeholder="Nazwisko" name="lastName">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                              <input type="text" class="form-control" placeholder="E-mail" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                              <input type="number" class="form-control" placeholder="Numer Telefonu" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="sex">Płeć</label> </br>
+                               <input type="radio" id="men" name="sex" value="1" checked> Mężczyzna
+                               <input type="radio" id="women" name="sex" value="2"> Kobieta
+                               <input type="radio" id="notSpecified" name="sex" value="3"> Nieokreślona
                             </div>
                         </div>
                         <div id="rightFormSection">
-                                <div class="form-group ">
-                                        <label for="email ">E-mail</label>
-                                      <input type="text " class="form-control " placeholder="E-mail " name="email">
-                                </div>
+                            <div class="form-group">
+                                <label for="subject">Temat</label>
+                              <input type="text" class="form-control" placeholder="Temat" name="subject">
+                              <div class="invalid-feedback">Temat musi mieć co najmniej 10 znaków.</div>
+                            </div>
+                            <div class="form-group">
+                                    <label for="description">Opis</label>
+                                    <textarea class="form-control" name="description"></textarea>
+                                    <div class="invalid-feedback">Opis musi mieć co najmniej 20 znaków.</div>
+                            </div>
 
-                            <div class="form-group ">
-                              <label for="model ">Model</label>
-                              <select class="form-control custom-select " name="itemid" id="model ">
-                                <option value=1>HP</option>
-                                <option value=2>Apple</option>
-                                <option value=3>Dell</option>
+                            <div class="form-group">
+                              <label for="origin">Origin</label>
+                              <select class="form-control custom-select" name="origin" id="origin">
+                                <option value=1>1</option>
+                                <option value=2>2</option>
+                                <option value=3>3</option>
                               </select>
                             </div>
 
-                            <div class="form-group ">
-                              <label for="user-role ">Typ usertki</label>
-                              <select class="form-control custom-select " name="type" id="type ">
+                            <div class="form-group">
+                                <label for="type">Type</label>
+                                <select class="form-control custom-select" name="type" id="type">
+                                  <option value=1>1</option>
+                                  <option value=2>2</option>
+                                  <option value=3>3</option>
+                                </select>
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="status">Status</label>
+                                  <select class="form-control custom-select" name="status" id="status">
+                                    <option value=1>1</option>
+                                    <option value=2>2</option>
+                                    <option value=3>3</option>
+                                  </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="priority">Priority</label>
+                                    <select class="form-control custom-select" name="priority" id="priority">
+                                      <option value=1>1</option>
+                                      <option value=2>2</option>
+                                      <option value=3>3</option>
+                                    </select>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <label for="itemid">Item</label>
+                                      <select class="form-control custom-select" name="itemid" id="itemid">
+                                        <option value=1>1</option>
+                                        <option value=2>2</option>
+                                        <option value=3>3</option>
+                                      </select>
+                                    </div>
+                              <div class="form-group">
+                                  <label for="productionYear">Rok Produkcji</label>
+                                      <input type="number" class="form-control" placeholder="Rok Produkcji" name="productionYear">
+                              </div>
+
+                            <div class="form-group">
+                              <label for="manufacturer">Producent</label>
+                              <select class="form-control custom-select" name="manufacturer" id="manufacturer">
+                                <option value="HP">HP</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Dell"></option>Dell</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="series">Seria</label>
+                              <select class="form-control custom-select" name="series" id="series">
+                                <option value="Inspiron">Inspiron</option>
+                                <option value="Latitude">Latitude</option>
+                                <option value="Vostro"></option>Vostro</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="name">Nazwa</label>
+                              <select class="form-control custom-select" name="name" id="name">
+                                <option value="5570">5570</option>
+                                <option value="6310">5570</option>
+                                <option value="7740"></option>5570</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="user-role">Typ usertki</label>
+                              <select class="form-control custom-select" name="type" id="type">
                                 <option value="1">Mechaniczna</option>
                                 <option value="2">Elektryczna</option>
-                                <option value="3 ">Inna</option>
+                                <option value="3">Inna</option>
                               </select>
                             </div>
                         </div>
-                        <div class="form-group text-center ">
-                                <button class="btn btn-success " type="submit" id="sendRequestButton" >Zgłoś</button>                           
+                        <div class="form-group text-center">
+                                <button class="btn btn-success" type="submit" id="sendRequestButton" >Zgłoś</button>                           
                         </div>
              </form>
     </div>
