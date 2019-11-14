@@ -2,27 +2,27 @@ $(document).ready(function() {
   $("#sendRequestButton").click(function(e) {
     var jsonData = {};
     var formData = $("#requestForm").serializeArray();
-    var firstName = formData[0];
-    var lastName = formData[1];
-    var sex = formData[2];
-    var email = formData[3];
-    var phone = formData[4];
+    var firstName = formData[0].value;
+    var lastName = formData[1].value;
+    var sex = formData[2].value;
+    var email = formData[3].value;
+    var phone = formData[4].value;
     var subject = formData[5];
     var description = formData[6];
     var origin = formData[7];
     var type = formData[8];
     var status = formData[9];
     var priority = formData[10];
-    var itemId = formData[11];
-    var productionYear = formData[12];
-    var name = formData[13];
-    var manufacturer = formData[14];
-    var series = formData[15];
+    var productionYear = formData[11].value;
+    var manufacturer= formData[12].value;
+    var series = formData[13].value;
+    var name= formData[14].value;
 
-    var person = {name: "person", value: {firstName, lastName, sex, email,phone}}
-    var customer = {name: "customer", value: person};
-    
-    var productSpecification = {name: "productSpecification", value: {manufacturer, series, name}};
+    var person = {firstName, lastName, sex, email, phone};
+    var customer = { person: person};
+
+    var productSpecification = {manufacturer, series, name};
+  
     var item = {name: "item", value:
     {productionYear, productSpecification, customer}}
 
@@ -31,7 +31,6 @@ $(document).ready(function() {
     formData.push(type);
     formData.push(status);
     formData.push(priority);
-    formData.push(itemId);
     formData.push(subject);
     formData.push(description);
     formData.push(item);
@@ -47,7 +46,6 @@ $(document).ready(function() {
         jsonData[this.name] = this.value || "";
       }
     });
-    debugger;
     console.log(jsonData);
     $.ajax({
       url: "http://localhost:5000/api/tickets",
@@ -61,14 +59,3 @@ $(document).ready(function() {
     alert("Zgłosznie zostało wysłane");
   });
 });
-function isAllFieldsAreFulfiled(formData) {
-  var counter = 0;
-  for (i = 0; i < formData.length; i++) {
-    if (formData[i].value != "") counter++;
-  }
-  return counter == formData.length;
-}
-function validateEmail(email) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
