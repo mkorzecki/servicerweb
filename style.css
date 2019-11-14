@@ -20,6 +20,13 @@
 body {
     font-family: "Open Sans",  "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+input:invalid {
+    border-color: red;
+  }
+  textarea:invalid {
+    border-color: red;
+  }
 #leftFormSection
 {
     margin-right: 2%;
@@ -30,4 +37,16 @@ body {
     margin-left: 2%;
     width: 48%;
     float: left;
+}
+#priorityDiv {
+    display: none;
+}
+#statusDiv{
+    display: none;
+}
+#originDiv {
+    display: none;
+}
+#typeDiv {
+    display: none;
 }

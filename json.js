@@ -4,16 +4,16 @@ $(document).ready(function() {
     var formData = $("#requestForm").serializeArray();
     var firstName = formData[0].value;
     var lastName = formData[1].value;
-    var sex = formData[2].value;
-    var email = formData[3].value;
-    var phone = formData[4].value;
+    var email= formData[2].value;
+    var phone= formData[3].value;
+    var sex= formData[4].value;
     var subject = formData[5];
     var description = formData[6];
     var origin = formData[7];
     var type = formData[8];
     var status = formData[9];
     var priority = formData[10];
-    var productionYear = formData[11].value;
+    var productionYear = prepareProductionYear (formData);
     var manufacturer= formData[12].value;
     var series = formData[13].value;
     var name= formData[14].value;
@@ -35,7 +35,6 @@ $(document).ready(function() {
     formData.push(description);
     formData.push(item);
     
-    console.log(formData);
     $.each(formData, function() {
       if (jsonData[this.name]) {
         if (!jsonData[this.name].push) {
@@ -52,10 +51,29 @@ $(document).ready(function() {
       method: "POST",
       dataType: "json",
       contentType: "application/json",
-      data: JSON.stringify(jsonData)
-    }).done(response => {
-      console.log(response);
-    }); 
-    alert("Zgłosznie zostało wysłane");
+      data: JSON.stringify(jsonData),
+      success: function () {
+        alert("Success");
+    },
+    error: function () {
+        alert("Error");
+    }
+    });
   });
+
+  function prepareProductionYear (formData) {
+    var d = new Date();
+    var mon = (d.getMonth()+1).toString();
+    var month = mon.length == 1 ? month = 0+mon : month = mon;
+    var min = d.getMinutes().toString();
+    var minutes = min.length == 1 ? minutes = 0+min : minutes = min;
+    var dat = d.getDate().toString();
+    var date = dat.length == 1 ? date = 0+dat : date = dat;
+    var hou = d.getHours().toString();
+    var hours = hou.length == 1 ? hours = 0+hou : hours = hou;
+    var sec = d.getSeconds();
+    var seconds = sec.length == 1 ? seconds = 0+sec : seconds = sec;
+
+    return formData[11].value +"-" + month+"-"+date+"T"+hours+":"+minutes+":"+seconds;
+  }
 });
