@@ -20,6 +20,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="json.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -107,6 +108,7 @@
                               <div class="form-group">
                                   <label for="productionYear">Rok Produkcji</label>
                                       <select class="form-control custom-select" name="productionYear" id="productionYear" required>
+                                        <option value=""> </option>
                                         <option value="1990">1990</option>
                                         <option value="1991">1991</option>
                                         <option value="1992">1992</option>
@@ -134,45 +136,64 @@
                                         <option value="2014">2014</option>
                                         <option value="2015">2015</option>
                                         <option value="2016">2016</option>
-                                        <option value="2017" selected="selected">2017</option>
+                                        <option value="2017">2017</option>
                                         <option value="2018">2018</option>
                                         <option value="2019">2019</option>
                                       </select>
                               </div>
+                              <div class="form-group">
+                                  <label for="user-role">Typ usertki</label>
+                                  <select class="form-control custom-select" name="type" id="type" required>
+                                    <option value=""> </option>
+                                    <option value="1">Mechaniczna</option>
+                                    <option value="2">Elektryczna</option>
+                                    <option value="3">Inna</option>
+                                  </select>
+                                </div>
 
                             <div class="form-group">
                               <label for="manufacturer">Producent</label>
-                              <select class="form-control custom-select" name="manufacturer" id="manufacturer">
+                              <select class="form-control custom-select" name="manufacturer" id="manufacturer" required>
+                                <option value=""> </option>
                                 <option value="HP">HP</option>
                                 <option value="Apple">Apple</option>
-                                <option value="Dell"></option>Dell</option>
+                                <option value="Dell">Dell</option>
                               </select>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" id="seriesGroup">
                               <label for="series">Seria</label>
-                              <select class="form-control custom-select" name="series" id="series">
-                                <option value="Inspiron">Inspiron</option>
-                                <option value="Latitude">Latitude</option>
-                                <option value="Vostro"></option>Vostro</option>
+                              <select class="form-control custom-select" name="series" id="series" required>
+                                  <option value=""> </option>
+                                    <option value="Inspiron" class="hpSeries">Inspiron</option>
+                                    <option value="Latitude"class="hpSeries" >Latitude</option>
+                                    <option value="Vostro" class="hpSeries">Vostro</option>
+                                    
+                                    <option value="Air" class="appleSeries">Air</option>
+                                    <option value="Pro" class="appleSeries">Pro</option>
+
+                                    <option value="Pavilion" class="dellSeries">Pavilion</option>
+                                    <option value="Envy" class="dellSeries">Envy</option>
+                                    <option value="Elitebook" class="dellSeries">Elitebook</option>
+                                </div>
                               </select>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group" id="namesGroup">
                               <label for="name">Nazwa</label>
-                              <select class="form-control custom-select" name="name" id="name">
-                                <option value="5570">5570</option>
-                                <option value="6310">5570</option>
-                                <option value="7740"></option>5570</option>
-                              </select>
-                            </div>
+                              <select class="form-control custom-select" name="name" id="names" required>
+                                <option value=""> </option>
+                                <option value="6140" class="hpNames">6140</option>
+                                <option value="6440" class="hpNames">6440</option>
+                                <option value="6859" class="hpNames">6859</option>
 
-                            <div class="form-group">
-                              <label for="user-role">Typ usertki</label>
-                              <select class="form-control custom-select" name="type" id="type">
-                                <option value="1">Mechaniczna</option>
-                                <option value="2">Elektryczna</option>
-                                <option value="3">Inna</option>
+                                <option value="MPTT200/A" class="appleNames">MPTT200/A</option>
+                                <option value="MPTT300/A" class="appleNames">MPTT300/A</option>
+                                <option value="MPTT400/A" class="appleNames">MPTT400/A</option>
+
+                                <option value="5570" class="dellNames">5570</option>
+                                <option value="7470" class="dellNames">7470</option>
+                                <option value="7740" class="dellNames">7770</option>
                               </select>
                             </div>
                         </div>

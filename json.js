@@ -56,7 +56,7 @@ $(document).ready(function() {
         alert("Success");
     },
     error: function () {
-        alert("Error");
+        alert("Bad Request");
     }
     });
   });

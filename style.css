@@ -21,12 +21,12 @@ body {
     font-family: "Open Sans",  "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-input:invalid {
+/* input:invalid {
     border-color: red;
   }
   textarea:invalid {
     border-color: red;
-  }
+  } */
 #leftFormSection
 {
     margin-right: 2%;
@@ -48,5 +48,12 @@ input:invalid {
     display: none;
 }
 #typeDiv {
+    display: none;
+}
+
+#seriesGroup {
+    display: none;
+}
+#namesGroup {
     display: none;
 }
