@@ -45,7 +45,9 @@ $(document).ready(function() {
         jsonData[this.name] = this.value || "";
       }
     });
+
     console.log(jsonData);
+    
     $.ajax({
       url: "http://localhost:5000/api/tickets",
       method: "POST",

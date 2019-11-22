@@ -33,6 +33,7 @@ $(function() {
             $('.dellSeries').show();
         }
     });
+    
     $('#series').change(function(){
         $('#names option:selected').prop("selected", false);
         if($('#series option:selected').text() != "")
