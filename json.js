@@ -14,9 +14,9 @@ $(document).ready(function() {
     var status = formData[9];
     var priority = formData[10];
     var productionYear = prepareProductionYear (formData);
-    var manufacturer= formData[13].value;
-    var series = formData[14].value;
-    var name= formData[15].value;
+    var manufacturer= formData[12].value;
+    var series = formData[13].value;
+    var name= formData[14].value;
 
     var person = {firstName, lastName, sex, email, phone};
     var customer = { person: person};
@@ -45,8 +45,6 @@ $(document).ready(function() {
         jsonData[this.name] = this.value || "";
       }
     });
-
-    console.log(jsonData);
     
     $.ajax({
       url: "http://localhost:5000/api/tickets",

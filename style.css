@@ -1,6 +1,7 @@
 .bg-primary {
     background-color: #008cba !important;
 }
+
  .fa { 
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -9,6 +10,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 } 
+
 .fa-wrench:before {
     content: "\f0ad";
 }
@@ -21,32 +23,31 @@ body {
     font-family: "Open Sans",  "Segoe UI",  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-/* input:invalid {
-    border-color: red;
-  }
-  textarea:invalid {
-    border-color: red;
-  } */
 #leftFormSection
 {
     margin-right: 2%;
     width: 48%;
     float: left;
 }
+
 #rightFormSection {
     margin-left: 2%;
     width: 48%;
     float: left;
 }
+
 #priorityDiv {
     display: none;
 }
+
 #statusDiv{
     display: none;
 }
+
 #originDiv {
     display: none;
 }
+
 #typeDiv {
     display: none;
 }
@@ -54,6 +55,11 @@ body {
 #seriesGroup {
     display: none;
 }
+
 #namesGroup {
+    display: none;
+}
+
+#sendRequestButton {
     display: none;
 }

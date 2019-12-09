@@ -29,20 +29,32 @@
             <hr>
             <div id="leftFormSection">
                <div class="form-group">
-                  <label for="firstName">Imie</label>
-                  <input type="text" class="form-control" placeholder="Imie" name="firstName" required>
+                  <label for="firstName">Imię</label>
+                  <input type="text" class="form-control" placeholder="Imię" name="firstName"  
+                           oninvalid="this.setCustomValidity('Wprowadź imię.');"
+                           oninput="setCustomValidity('');"
+                           required>
                </div>
                <div class="form-group">
                   <label for="lastName">Nazwisko</label>
-                  <input type="text" class="form-control" placeholder="Nazwisko" name="lastName" required>
+                  <input type="text" class="form-control" placeholder="Nazwisko" name="lastName"
+                           oninvalid="this.setCustomValidity('Wprowadź nazwisko.');"
+                           oninput="setCustomValidity('');"
+                           required>
                </div>
                <div class="form-group">
                   <label for="email">E-mail</label>
-                  <input type="email" class="form-control" placeholder="E-mail" name="email" required>
+                  <input type="email" class="form-control" placeholder="E-mail" name="email"  
+                           oninvalid="this.setCustomValidity('Wprowadź email we właściwym formacie.');"
+                           oninput="setCustomValidity('');"
+                           required>
                </div>
                <div class="form-group">
                   <label for="phone">Telefon</label>
-                  <input type="number" class="form-control" placeholder="Numer Telefonu" name="phone">
+                  <input type="number" class="form-control" placeholder="Numer telefonu" name="phone" 
+                           oninvalid="this.setCustomValidity('Wprowadź numer telefonu.');"
+                           oninput="setCustomValidity('');"
+                           required>
                </div>
                <div class="form-group">
                   <label for="sex">Płeć</label> </br>
@@ -54,13 +66,20 @@
             <div id="rightFormSection">
                <div class="form-group">
                   <label for="subject">Temat</label>
-                  <input type="text" class="form-control" placeholder="Temat" name="subject" required>
-                  <div class="invalid-feedback">Temat musi mieć co najmniej 10 znaków.</div>
+                  <input type="text" class="form-control" placeholder="Temat" name="subject" 
+                           minlength=10
+                           oninvalid="this.setCustomValidity('Temat musi mieć co najmniej 10 znaków.');"
+                           oninput="setCustomValidity('');"
+                           required>
+                  <div class="invalid-feedback"></div>
                </div>
                <div class="form-group">
                   <label for="description">Opis</label>
-                  <textarea class="form-control" placeholder="Opis" name="description" required></textarea>
-                  <div class="invalid-feedback">Opis musi mieć co najmniej 20 znaków.</div>
+                  <textarea class="form-control" placeholder="Opis" name="description" 
+                              minlength=20
+                              oninvalid="this.setCustomValidity('Opis musi mieć co najmniej 20 znaków.');"
+                              oninput="setCustomValidity('');"
+                              required></textarea>
                </div>
                <div class="form-group" id="originDiv">
                   <label for="origin">Origin</label>
@@ -131,17 +150,11 @@
                   </select>
                </div>
                <div class="form-group">
-                  <label for="user-role">Typ usertki</label>
-                  <select class="form-control custom-select" name="type" id="type" required>
-                     <option value=""> </option>
-                     <option value="1">Mechaniczna</option>
-                     <option value="2">Elektryczna</option>
-                     <option value="3">Inna</option>
-                  </select>
-               </div>
-               <div class="form-group">
                   <label for="manufacturer">Producent</label>
-                  <select class="form-control custom-select" name="manufacturer" id="manufacturer" required>
+                  <select class="form-control custom-select" name="manufacturer" id="manufacturer"  
+                           oninvalid="this.setCustomValidity('Wybierz producenta.');"
+                           oninput="setCustomValidity('');"
+                           required>
                      <option value=""> </option>
                      <option value="HP">HP</option>
                      <option value="Apple">Apple</option>
@@ -150,7 +163,10 @@
                </div>
                <div class="form-group" id="seriesGroup">
                   <label for="series">Seria</label>
-                  <select class="form-control custom-select" name="series" id="series" required>
+                  <select class="form-control custom-select" name="series" id="series" 
+                           oninvalid="this.setCustomValidity('Wybierz serię.');"
+                           oninput="setCustomValidity('');"
+                           required>
                      <option value=""> </option>
                      <option value="Pavilion" class="hpSeries">Pavilion</option>
                      <option value="Envy" class="hpSeries">Envy</option>
@@ -164,8 +180,11 @@
                </select>
             </div>
             <div class="form-group" id="namesGroup">
-               <label for="name">Nazwa</label>
-               <select class="form-control custom-select" name="name" id="names" required>
+               <label for="name">Model</label>
+               <select class="form-control custom-select" name="name" id="model" 
+                        oninvalid="this.setCustomValidity('Wybierz model.');"
+                        oninput="setCustomValidity('');"
+                        required>>
                   <option value=""> </option>
                   <option value="6140" class="hpNames">6140</option>
                   <option value="6440" class="hpNames">6440</option>
@@ -180,7 +199,7 @@
             </div>
       </div>
       <div class="form-group text-center">
-      <button class="btn btn-success" type="submit" id="sendRequestButton" >Zgłoś</button>                           
+      <button class="btn btn-success" type="submit" id="sendRequestButton">Zgłoś</button>                           
       </div>
       </form>
       </div>
