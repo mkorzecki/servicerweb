@@ -70,9 +70,32 @@ $(function() {
     $('#model').change(function(){
         if($('#model').val()) { 
             $('#sendRequestButton').show();
+            checkboxValueCheck();
         }
         else {
             $('#sendRequestButton').hide();
+            checkboxValueCheck();
         }        
     });
-  });
+
+    $('input[type="checkbox"]').click(function(){
+        if($(this).is(":checked")){
+            $('#sendRequestButton').prop('disabled', false);
+            $('#consentWarning').hide();            
+        }
+        else if($(this).is(":not(:checked)")){
+            $('#sendRequestButton').prop('disabled', true);
+            $('#consentWarning').show();
+        }
+    });
+function checkboxValueCheck () {
+    if($('#consent').is(":checked")) {
+        $('#sendRequestButton').prop('disabled', false);
+            $('#consentWarning').hide();  
+    }
+    else {
+        $('#sendRequestButton').prop('disabled', true);
+        $('#consentWarning').show();
+    }
+}
+});
