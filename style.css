@@ -60,10 +60,6 @@ body {
     display: none;
 }
 
-#sendRequestButton {
-    display: none;
-}
-
 #buttonDiv {
     float: left;
     width: auto;

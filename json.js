@@ -52,7 +52,7 @@ $(document).ready(function() {
       contentType: "application/json",
       data: JSON.stringify(jsonData),
       success: function () {
-        alert("Success");
+        console.log("Success");
     },
     error: function () {
         alert("Bad Request");

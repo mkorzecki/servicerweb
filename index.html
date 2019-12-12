@@ -67,8 +67,8 @@
                         <input type="checkbox" name="consent" value="Yes" id="consent"   
                         oninvalid="this.setCustomValidity('Zgoda jest wymagana.');"
                         oninput="setCustomValidity('');"
-                        required> Wyrażam zgodę na przetwarzanie moich danych osobowych.  
-                        <div id="consentWarning">Uzupełnij wymaganą zgodę, w przeciwnym wypadku twoje zgłoszenie nie zostanie wysłane.</div>  
+                        required> Wyrażam zgodę na przetwarzanie moich danych osobowych.
+                        <div id="consentWarning">Zaznacz wymaganą zgodę, w przeciwnym wypadku twoje zgłoszenie nie zostanie wysłane.</div>  
                   </div>    
             </div>
 
@@ -77,7 +77,7 @@
                   <label for="subject">Temat</label>
                      <input type="text" class="form-control" placeholder="Temat" name="subject" 
                               minlength=10
-                              oninvalid="this.setCustomValidity('Temat musi mieć co najmniej 10 znaków.');"
+                              oninvalid="this.setCustomValidity('Temat musi zawierać co najmniej 10 znaków.');"
                               oninput="setCustomValidity('');"
                               required>
                </div>
@@ -85,7 +85,7 @@
                   <label for="description">Opis</label>
                      <textarea class="form-control" placeholder="Opis" name="description" 
                                  minlength=20
-                                 oninvalid="this.setCustomValidity('Opis musi mieć co najmniej 20 znaków.');"
+                                 oninvalid="this.setCustomValidity('Opis musi zawierać co najmniej 20 znaków.');"
                                  oninput="setCustomValidity('');"
                                  required></textarea>
                </div>
