@@ -97,14 +97,6 @@
                         <option value=3>3</option>
                      </select>
                </div>
-               <div class="form-group" id="typeDiv">
-                  <label for="type">Type</label>
-                     <select class="form-control custom-select" name="type" id="type">
-                        <option value=1>1</option>
-                        <option value=2>2</option>
-                        <option value=3>3</option>
-                     </select>
-               </div>
                <div class="form-group" id="statusDiv">
                   <label for="status">Status</label>
                      <select class="form-control custom-select" name="status" id="status">
@@ -155,6 +147,18 @@
                         <option value="2017">2017</option>
                         <option value="2018">2018</option>
                         <option value="2019">2019</option>
+                     </select>
+               </div>
+               <div class="form-group">
+                  <label for="type">Typ usertki</label>
+                     <select class="form-control custom-select" name="type" id="type"
+                                 oninvalid="this.setCustomValidity('Wybierz typ usereki.');"
+                                 oninput="setCustomValidity('');"
+                                 required>
+                        <option value=""> </option>
+                        <option value=1>Mechaniczna</option>
+                        <option value=2>Elektryczna</option>
+                        <option value=3>Inna</option>
                      </select>
                </div>
                <div class="form-group">
